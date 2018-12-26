@@ -1,0 +1,46 @@
+{
+  "userData": [
+    {
+      "id": 1,
+      "name": "James",
+      "age": 24,
+      "isActive": true
+    },
+    {
+      "id": 4,
+      "name": "Katherine",
+      "age": 27,
+      "isActive": false
+    },
+    {
+      "id": 5,
+      "name": "Murray",
+      "age": 25,
+      "isActive": true
+    },
+    {
+      "id": 6,
+      "name": "Rachel",
+      "age": 30,
+      "isActive": true
+    },
+    {
+      "id": 7,
+      "name": "Jack",
+      "age": 32,
+      "isActive": false
+    },
+    {
+      "id": 8,
+      "name": "john",
+      "age": 33,
+      "isActive": true
+    },
+    {
+      "id": 9,
+      "name": "Marry",
+      "age": 23,
+      "isActive": true
+    }
+  ]
+}

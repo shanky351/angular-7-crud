@@ -1,0 +1,35 @@
+.update-page{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    .card-container{
+        border: 1px solid #ddd;
+        .card-header{
+            display: flex;
+            align-items: center;
+            background-color: #ddd;
+            justify-content: space-between;
+            h2{
+                color: #673ab7;
+                padding: 15px;
+                margin: 0;
+            }
+        }
+        .card{
+            padding: 15px;
+            width: 100%;
+            .mr-r-10{
+                margin-right: 10px;
+            }
+            
+        }
+        .card-footer{
+            padding: 5px 10px;
+            font-size: 12px;
+            background-color: #f5f5f5;
+            justify-content: space-between;
+        }
+    }
+}

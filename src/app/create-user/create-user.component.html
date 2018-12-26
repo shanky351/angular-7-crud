@@ -1,0 +1,51 @@
+
+<div class="update-page">
+  <div>
+    <div class="card-header">
+      <h2>Update User</h2>
+      <!-- Rounded switch -->
+      <div class="switch-container">
+          <label class="switch">
+            <input type="checkbox" [(ngModel)]="defaultIsActive">
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+    <mat-card>
+      <form [formGroup]="userForm" (ngSubmit)="submitForm(userForm.value)">
+        <div class="example-container">
+            <mat-form-field>
+              <input type="text" [maxlength]="50" matInput placeholder="Name" formControlName="name">
+            </mat-form-field>
+
+            <p class="red fsize-12" *ngIf="(userForm.get('name').hasError('required')) && 
+                                           (userForm.get('name').dirty ||
+                                           userForm.get('name').touched)">This field is required</p>
+            <p class="red fsize-12" *ngIf="(userForm.get('name').hasError('minlength')) && 
+                                           (userForm.get('name').dirty ||
+                                           userForm.get('name').touched)">Minimum length should be 4</p>
+            <p class="red fsize-12" *ngIf="(userForm.get('name').hasError('pattern')) && 
+                                           (userForm.get('name').dirty ||
+                                           userForm.get('name').touched)">Invalid Data</p>
+
+            <mat-form-field>
+              <input type="number" matInput placeholder="Age" formControlName="age">
+            </mat-form-field>
+
+            <p class="red fsize-12" *ngIf="(userForm.get('age').hasError('required')) && 
+                                           (userForm.get('age').dirty ||
+                                           userForm.get('age').touched)">This field is required</p>
+            <p class="red fsize-12" *ngIf="(userForm.get('age').hasError('minValue')) && 
+                                           (userForm.get('age').dirty ||
+                                           userForm.get('age').touched)">Minimun age is 18</p>
+            <p class="red fsize-12" *ngIf="(userForm.get('age').hasError('maxValue')) && 
+                                           (userForm.get('age').dirty ||
+                                           userForm.get('age').touched)">Maximum age limit is 60</p>                               
+
+        </div>
+        <button mat-raised-button color="default" class="mr-r-10" routerLink="users">Back</button>
+        <button [disabled]="!userForm.valid" mat-raised-button color="primary" type="submit">Submit</button>
+      </form>
+    </mat-card>
+  </div>
+</div>

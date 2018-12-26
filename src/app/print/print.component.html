@@ -1,0 +1,22 @@
+
+<div class="update-page">
+  <div class="card-container">
+    <div class="card-header">
+      <h2>Print User</h2>
+    </div>
+    <div class="card">
+        <div>
+          <p><span>ID :</span> {{defaultUserData?.id}}</p>
+          <p><span>Name :</span> {{defaultUserData?.name}}</p>
+          <p><span>Age :</span> {{defaultUserData?.age}}</p>
+          <p><span>isActive :</span> {{defaultUserData?.isActive | booleanConverter}}</p>
+        </div>
+        <button mat-raised-button color="default" class="mr-r-10" routerLink="users">Back</button>
+        <button mat-raised-button color="primary" (click)="print()">Print</button>
+    </div>
+    <div class="card-footer">
+        <p>{{defaultUserData | json}}</p>
+    </div>
+  </div>
+  
+</div>

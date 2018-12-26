@@ -1,0 +1,25 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: 25%;
+  }
+
+  .btn-group{
+      display: flex;
+      justify-content: center;
+      button{
+          margin: 0 5px;
+      }
+  }
+
+  .create-user{
+    text-align: right;
+    margin-bottom: 20px;
+  }
